@@ -1,0 +1,26 @@
+.card {
+  @apply relative flex flex-col items-center justify-center 
+         text-left md:text-center p-6 w-full max-w-[300px] 
+         md:w-auto gap-4 bg-brand-dark-card rounded-none 
+         md:rounded-[10px] transition-all duration-300;
+}
+
+.card:hover {
+  @apply -translate-y-2;
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.4),
+    0 0 20px rgb(195, 139, 79, 0.2);
+}
+
+.card::before {
+  content: "";
+  @apply absolute inset-[-2px] 
+         bg-gradient-to-br from-brand-gold/10 to-brand-gold/5 
+         opacity-0 transition-opacity duration-300 -z-10 
+         pointer-events-none;
+  border-radius: inherit;
+}
+
+.card:hover::before {
+  @apply opacity-100;
+}

@@ -1,0 +1,25 @@
+.submitButton {
+  @apply w-full bg-brand-light text-black hover:text-white 
+         font-medium py-3 px-6 rounded-full flex items-center 
+         justify-center gap-2 mt-4 hover:bg-brand-gold 
+         hover:border-brand-gold transition-all duration-200 
+         ease-out origin-center relative overflow-hidden 
+         hover:scale-[1.02] active:scale-[0.98] 
+         active:animate-button-press disabled:hover:scale-100;
+}
+
+.submitButton:hover {
+  box-shadow: 0 4px 12px rgba(195, 139, 79, 0.3);
+}
+
+.iconContainer {
+  @apply bg-brand-light-icon rounded-full p-1 
+         group-hover:bg-brand-gold transition-all 
+         text-black group-hover:text-white relative z-10;
+}
+
+.icon {
+  @apply transition-transform duration-200 ease-out 
+         group-hover:translate-x-1;
+}
+
