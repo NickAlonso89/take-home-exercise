@@ -43,6 +43,13 @@ function FormField({
   const inputRef = useRef<HTMLInputElement>(null);
   const previousErrorRef = useRef(error);
 
+  // Sync hasValue with input value on mount and when defaultValue changes
+  useEffect(() => {
+    if (inputRef.current) {
+      setHasValue(!!inputRef.current.value);
+    }
+  }, [defaultValue]);
+
   useEffect(() => {
     if (error !== previousErrorRef.current) {
       previousErrorRef.current = error;
@@ -64,7 +71,13 @@ function FormField({
     }
   }, [error]);
 
-  const handleFocus = () => setIsFocused(true);
+  const handleFocus = () => {
+    setIsFocused(true);
+    // Check if input has value on focus to ensure label floats correctly
+    if (inputRef.current) {
+      setHasValue(!!inputRef.current.value);
+    }
+  };
 
   const handleBlur = () => {
     setIsFocused(false);

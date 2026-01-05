@@ -39,7 +39,7 @@ function InfoTab() {
           defaultValue={formData?.fullName}
         />
         <FormField
-          label="Date of Birth"
+          label="Date of Birth (MM/DD/YYYY)"
           type="text"
           id="dateOfBirth"
           name="dateOfBirth"

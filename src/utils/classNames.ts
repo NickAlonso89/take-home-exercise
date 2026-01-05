@@ -31,9 +31,9 @@ export function getFormFieldContainerClasses(hasError: boolean): string {
  */
 export function getFloatingLabelClasses(shouldFloat: boolean): string {
   const base =
-    "text-sm pointer-events-none absolute left-3 transition-all duration-300 z-10 m-0 leading-normal";
+    "text-sm pointer-events-none absolute left-3 transition-all duration-300 z-10 m-0 leading-normal whitespace-nowrap";
   return shouldFloat
-    ? `${base} top-0.5 scale-[0.85] origin-left-top text-brand-gold`
+    ? `${base} top-2 text-xs text-brand-gold`
     : `${base} top-1/2 -translate-y-1/2 text-brand-gray`;
 }
 
@@ -45,10 +45,9 @@ export function getFormInputClasses(shouldFloatLabel: boolean): string {
   const base =
     "bg-transparent text-white w-full outline-none font-normal pt-0 pb-0 h-6 leading-6 flex-1";
   const padding = shouldFloatLabel ? "pt-2" : "";
-  const placeholder =
-    !shouldFloatLabel
-      ? "[&::placeholder]:opacity-0 [&::placeholder]:text-transparent"
-      : "";
+  const placeholder = !shouldFloatLabel
+    ? "[&::placeholder]:opacity-0 [&::placeholder]:text-transparent"
+    : "";
   return `${base} ${padding} ${placeholder}`.trim();
 }
 
@@ -63,4 +62,3 @@ export function getTabButtonClasses(isDisabled: boolean): string {
     ? `${base} cursor-not-allowed opacity-50`
     : `${base} cursor-pointer hover:scale-105`;
 }
-
