@@ -23,6 +23,7 @@ import {
  */
 interface ParsedAddress {
   address: string;
+  address2?: string;
   city: string;
   state: string;
   zip: string;
@@ -117,10 +118,21 @@ function AddressAutocomplete({
       )}
 
       {status === "OK" && (
-        <ul className="pac-container absolute w-full list-none m-0 top-full">
+        <ul
+          className="pac-container absolute w-full list-none m-0 top-full"
+          role="listbox"
+          aria-label="Address suggestions"
+        >
           {data.map(({ place_id, description }) => (
-            <li key={place_id} onClick={() => handleSelect(description)} className="pac-item">
-              {description}
+            <li key={place_id} role="option">
+              <button
+                type="button"
+                onClick={() => handleSelect(description)}
+                className="pac-item w-full text-left"
+                aria-label={`Select address: ${description}`}
+              >
+                {description}
+              </button>
             </li>
           ))}
         </ul>

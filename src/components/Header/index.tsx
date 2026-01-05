@@ -10,7 +10,7 @@ import NavItem from "../NavItem";
  */
 function Header() {
   return (
-    <div className="flex lg:grid lg:grid-cols-3 items-center max-w-[1280px] mx-auto">
+    <header className="flex lg:grid lg:grid-cols-3 items-center max-w-[1280px] mx-auto">
       <a
         href="/"
         className="text-white flex my-4 sm:my-6 mr-6 hover:text-brand-gold lg:justify-self-start lg:mr-0"
@@ -23,7 +23,7 @@ function Header() {
         <NavItem href="/about-us" name="About Us" />
         <NavItem href="/contact" name="Contact" />
       </Nav>
-    </div>
+    </header>
   );
 }
 

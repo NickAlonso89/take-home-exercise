@@ -176,7 +176,7 @@ function App() {
           />
         </section>
         <Disclaimer>THIS SITE IS NOT AFFLIATED WITH ANY GOVERNMENT AGENCY.</Disclaimer>
-        <section className="flex flex-col items-center py-6 md:py-12 px-6">
+        <footer className="flex flex-col items-center py-6 md:py-12 px-6">
           <Logo />
           <Nav className="my-6 justify-center md:justify-start">
             <NavItem href="/programs" name="Programs" className="md:hidden" />
@@ -189,7 +189,7 @@ function App() {
             <NavItem href="/contact" name="Contact" />
           </Nav>
           <p className="text-brand-gray">© 2026 Government Benefits Guide. All rights reserved.</p>
-        </section>
+        </footer>
       </main>
     </>
   );

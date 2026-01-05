@@ -114,7 +114,7 @@ function AddressTab() {
           label={
             <span>
               I agree to sign up for marketing messages from Benefits Access Center and their{" "}
-              <Link href="marketing-partners" text="partners" />
+              <Link href="marketing-partners" text="partners" />.
             </span>
           }
           id="phoneMarketingConsent"
@@ -124,7 +124,7 @@ function AddressTab() {
         <Checkbox
           label={
             <span>
-              I agree to the <Link href="/terms" text="terms and conditions" />{" "}
+              I agree to the <Link href="/terms" text="terms and conditions" />.
             </span>
           }
           id="phoneTermsAndConditions"

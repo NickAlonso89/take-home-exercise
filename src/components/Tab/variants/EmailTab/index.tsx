@@ -41,8 +41,7 @@ function EmailTab() {
         <Checkbox
           label={
             <span>
-              I agree to receive marketing and promotional emails from GetnGooods and our
-              partners.{" "}
+              I agree to receive marketing and promotional emails from GetnGooods and our partners.
             </span>
           }
           id="marketingConsent"
@@ -54,7 +53,7 @@ function EmailTab() {
           label={
             <span>
               I have read and agree to the <Link href="/terms" text="terms and conditions" /> and{" "}
-              <Link href="/privacy" text="privacy policy" />{" "}
+              <Link href="/privacy" text="privacy policy" />.
             </span>
           }
           id="termsAndConditions"

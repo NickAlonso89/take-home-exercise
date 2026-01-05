@@ -15,14 +15,14 @@ interface CardProps {
  */
 function Card({ Icon, text }: CardProps) {
   return (
-    <div className={styles.card}>
+    <article className={styles.card}>
       {Icon && <Icon className="flex-shrink-0 self-center" />}
       {text && (
         <p className="text-base font-normal text-white m-0 min-h-[54px] flex items-center md:mt-4 md:text-center">
           {text}
         </p>
       )}
-    </div>
+    </article>
   );
 }
 
